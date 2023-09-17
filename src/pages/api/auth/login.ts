@@ -1,11 +1,6 @@
-import fs from 'fs';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { refresh, sign } from '@/utils/jwt';
 import { setUserLoggedIn } from '@/utils/data';
-import type { User } from './join';
-
-const filePath = `${process.cwd()}/public/data.json`;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   switch (req.method) {

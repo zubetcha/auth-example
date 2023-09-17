@@ -1,38 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# react 회원가입 & 로그인 구현 예제
 
-## Getting Started
+### API
 
-First, run the development server:
+본 예제에서 사용한 API는 실제 데이터베이스를 이용한 것이 아닌 임시의 정적인 json 데이터를 사용합니다. 또한 API는 단순 통신 구현만을 목적으로 하여 Nextjs의 [API Routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)로 구현되어 있으며, 일반적인 서비스에서 개발하는 API보다 완성도가 현저히 떨어집니다. 따라서 실제 프로젝트에서 구현하는 API와는 설정 및 환경 등이 다를 수 있습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### 페이지 라우팅
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Nextjs를 사용한 예제이기 때문에 페이지 라우팅 시 Nextjs의 라우팅 훅을 사용하고 있습니다. React만 사용한다면 [react-router-dom](https://reactrouter.com/en/main/hooks/use-navigate)이 제공하는 훅을 사용하시면 됩니다.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### react-hook-form
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+폼 요소가 많으면 많아질수록 상태관리는 더욱 복잡해질 수 밖에 없습니다. [react-hook-form](https://www.react-hook-form.com/)은 이런 복잡한 폼 관련 상태들을 간편하게 관리할 수 있도록 도와주는 라이브러리입니다.
